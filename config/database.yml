@@ -1,4 +1,4 @@
-<% project_name = 'rails-api-template' %>
+<% project_name = 'bubble-tea-api' %>
 
 default: &default
   adapter: postgresql
