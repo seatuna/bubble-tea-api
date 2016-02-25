@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225213128) do
+ActiveRecord::Schema.define(version: 20160225214121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,10 @@ ActiveRecord::Schema.define(version: 20160225213128) do
     t.text     "notes"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "store_id"
   end
+
+  add_index "drinks", ["store_id"], name: "index_drinks_on_store_id", using: :btree
 
   create_table "stores", force: :cascade do |t|
     t.string   "name",       null: false
@@ -55,4 +58,5 @@ ActiveRecord::Schema.define(version: 20160225213128) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["token"], name: "index_users_on_token", unique: true, using: :btree
 
+  add_foreign_key "drinks", "stores"
 end
