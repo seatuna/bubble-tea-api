@@ -1,3 +1,3 @@
 class DrinkSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :ingredients, :toppings, :notes, :store
 end

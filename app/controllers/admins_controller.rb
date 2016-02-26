@@ -1,4 +1,4 @@
-class AdminsController < ApplicationController
+class AdminsController < ProtectedController
   before_action :set_admin, only: [:show, :update, :destroy]
 
   # GET /admins
