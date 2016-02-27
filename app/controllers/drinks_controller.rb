@@ -1,4 +1,4 @@
-class DrinksController < ApplicationController
+class DrinksController < ProtectedController
   before_action :set_drink, only: [:show, :update, :destroy]
 
   # GET /drinks
@@ -18,7 +18,7 @@ class DrinksController < ApplicationController
   # POST /drinks
   # POST /drinks.json
   def create
-    @drink = Drink.new(drink_params)
+    @drink = Store.find(params[:store_id]).drinks.build(drink_params) # need to 
 
     if @drink.save
       render json: @drink, status: :created, location: @drink
@@ -54,6 +54,6 @@ class DrinksController < ApplicationController
     end
 
     def drink_params
-      params[:drink]
+      params.require(:drinks).permit(:name, :ingredients, :toppings, :notes, :store_id)
     end
 end
