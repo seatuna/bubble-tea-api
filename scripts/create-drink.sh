@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl --include --request POST http://localhost:3000/stores/:store_id/drinks \
+curl --include --request POST http://localhost:3000/stores/1/drinks \
   --header "Authorization: Token token=f1db76d1212437a43dd1fae030b4d39d" \
   --header "Content-Type: application/json" \
   --data '{
