@@ -1,4 +1,4 @@
-class DrinksController < ProtectedController
+class DrinksController < OpenReadController
   before_action :set_drink, only: [:show, :update, :destroy]
 
   # GET /drinks
@@ -18,7 +18,7 @@ class DrinksController < ProtectedController
   # POST /drinks
   # POST /drinks.json
   def create
-    @drink = Store.find(params[:store_id]).drinks.build(drink_params) # need to 
+    @drink = Store.find(params[:store_id]).drinks.build(drink_params) # need to
 
     if @drink.save
       render json: @drink, status: :created, location: @drink
