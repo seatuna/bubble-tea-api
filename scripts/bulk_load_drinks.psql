@@ -1,0 +1,2 @@
+-- bulk load drinks data
+\copy drinks(name,ingredients,toppings,notes,store_id) FROM 'data/drinks.csv' WITH (HEADER true, FORMAT csv)

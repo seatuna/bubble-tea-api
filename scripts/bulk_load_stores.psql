@@ -1,0 +1,2 @@
+-- bulk load stores data
+\copy stores(name,locations,tips) FROM 'data/stores.csv' WITH (HEADER true, FORMAT csv)
