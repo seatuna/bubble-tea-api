@@ -1,5 +1,5 @@
 name,ingredients,toppings,notes,store_id
-Jasmine Green Milk Tea,"Jastmine green tea, milk",Tapioca pearls,Jasmine tea is flowery,1
+Jasmine Green Milk Tea,"Jasmine green tea, milk",Tapioca pearls,Jasmine tea is flowery,1
 Genmaicha Milk Tea,"Genmaicha, milk",Tapioca pearls,Genmaicha is roasted brown rice green tea,2
 Taro Milk Tea,"Taro powder, milk, green tea",Tapioca pearls,Taro is a root vegetable,1
 Red Wow Milk,Milk,"Tapioca pearls, azuki beans",Azuki beans are red beans,1
@@ -19,3 +19,7 @@ Yogurt Grapefruit Juice,"Yakult, grapefruit juice",Tapioca pearls,Yakult is a ta
 Yogurt Green Tea,"Yakult, green tea",Tapioca pearls,Yakult is a tart yogurt drink,1
 Herbal Jelly Wow Milk,Milk,"Tapioca pearls, herbal jelly",Herbal jelly is jelly made of herbs,1
 Longan Red Date Tea,"Jujube tea, red date syrup",Tapioca pearls,"Longan is jujube, great for sore throats",1
+Red Guava,"Red guava syrup, green tea",Jelly or aloe,Sweet and a little tart,3
+The Hulk,"Kiwi syrup, green apple syrup, lychee syrup",Aloe,"Green like Hulk, but sweeter",3
+Thai Milk Tea,"Thai tea, milk",Tapioca pearls,Orange in color,3
+Kumquat Juice,Kumquat juice,Any,Kumquats are like tiny oranges,2
