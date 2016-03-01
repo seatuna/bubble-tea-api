@@ -1,7 +1,7 @@
 #!/bin/bash
 
 curl --include --request POST http://localhost:3000/stores/1/drinks \
-  --header "Authorization: Token token=f1db76d1212437a43dd1fae030b4d39d" \
+  --header "Authorization: Token token=265da3d7f6f4d3dd7b439fc6b1e9ffb8" \
   --header "Content-Type: application/json" \
   --data '{
     "drinks": {

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225214121) do
+ActiveRecord::Schema.define(version: 20160301034948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,9 +35,11 @@ ActiveRecord::Schema.define(version: 20160225214121) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "store_id"
+    t.integer  "user_id"
   end
 
   add_index "drinks", ["store_id"], name: "index_drinks_on_store_id", using: :btree
+  add_index "drinks", ["user_id"], name: "index_drinks_on_user_id", using: :btree
 
   create_table "stores", force: :cascade do |t|
     t.string   "name",       null: false
@@ -45,7 +47,10 @@ ActiveRecord::Schema.define(version: 20160225214121) do
     t.text     "tips"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
+
+  add_index "stores", ["user_id"], name: "index_stores_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
@@ -59,4 +64,6 @@ ActiveRecord::Schema.define(version: 20160225214121) do
   add_index "users", ["token"], name: "index_users_on_token", unique: true, using: :btree
 
   add_foreign_key "drinks", "stores"
+  add_foreign_key "drinks", "users"
+  add_foreign_key "stores", "users"
 end

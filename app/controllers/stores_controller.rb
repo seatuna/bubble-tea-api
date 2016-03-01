@@ -1,4 +1,4 @@
-class StoresController < ApplicationController
+class StoresController < OpenReadController
   before_action :set_store, only: [:show, :update, :destroy]
 
   # GET /stores

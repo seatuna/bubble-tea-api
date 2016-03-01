@@ -18,19 +18,21 @@ class DrinksController < OpenReadController
   # POST /drinks
   # POST /drinks.json
   def create
-    @drink = Store.find(params[:store_id]).drinks.build(drink_params) # need to
+    @drink = current_user.stores.find(params[:store_id]).drinks.build(drink_params)
+    @drink.user_id = current_user.id
 
     if @drink.save
       render json: @drink, status: :created, location: @drink
     else
       render json: @drink.errors, status: :unprocessable_entity
     end
+
   end
 
   # PATCH/PUT /drinks/1
   # PATCH/PUT /drinks/1.json
   def update
-    @drink = Drink.find(params[:id])
+    @drink = current_user.drinks.find(params[:id])
 
     if @drink.update(drink_params)
       head :no_content
@@ -42,9 +44,12 @@ class DrinksController < OpenReadController
   # DELETE /drinks/1
   # DELETE /drinks/1.json
   def destroy
-    @drink.destroy
-
-    head :no_content
+    if current_user.id == @drink.user_id
+      @drink.destroy
+      head :no_content
+    else
+      render json: @drink.errors, status: :unprocessable_entity
+    end
   end
 
   private
@@ -54,6 +59,6 @@ class DrinksController < OpenReadController
     end
 
     def drink_params
-      params.require(:drinks).permit(:name, :ingredients, :toppings, :notes, :store_id)
+      params.require(:drinks).permit(:name, :ingredients, :toppings, :notes, :store_id, :user_id)
     end
 end

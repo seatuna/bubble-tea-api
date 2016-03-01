@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'
-  resources :users, only: [:index, :show]
+  resources :users
 
   resources :drinks, except: [:new, :edit, :create]
   resources :stores, only: [:index, :show] do
