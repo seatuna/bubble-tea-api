@@ -16,17 +16,6 @@ ActiveRecord::Schema.define(version: 20160301200919) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "admins", force: :cascade do |t|
-    t.string   "email",           null: false
-    t.string   "token",           null: false
-    t.string   "password_digest", null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
-  add_index "admins", ["token"], name: "index_admins_on_token", unique: true, using: :btree
-
   create_table "drinks", force: :cascade do |t|
     t.string   "name",        null: false
     t.string   "ingredients", null: false

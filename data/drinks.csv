@@ -1,25 +1,33 @@
-name,ingredients,toppings,notes,store_id
-Jasmine Green Milk Tea,"Jasmine green tea, milk",Tapioca pearls,Jasmine tea is flowery,1
-Genmaicha Milk Tea,"Genmaicha, milk",Tapioca pearls,Genmaicha is roasted brown rice green tea,2
-Taro Milk Tea,"Taro powder, milk, green tea",Tapioca pearls,Taro is a root vegetable,1
-Red Wow Milk,Milk,"Tapioca pearls, azuki beans",Azuki beans are red beans,1
-Green Wow Milk,Milk,"Tapioca pearls, mung beans",Mung beans are also called green beans in Chinese,1
-Hokkaido Milk Tea,"Black tea, milk",Tapioca pearls,"Milk tea from Hokkaido, Japan.  Tastes like french vanilla.",3
-Passionfruit Green Tea,"Black tea, passionfruit syrup",Tapioca pearls,Also tastes good with aloe or jelly as toppings,3
-Matcha Tea Latte,"Matcha powder, milk",Tapioca pearls,Matcha is fancy Japanese green tea,2
-Fire Dragon,Milk,"Azuki beans, grass jelly, tapioca pearls",Similar to Kung Fu Tea's Red Wow Milk,3
-Green Wizard,Milk,"Mung beans, grass jelly, tapioca",Similar to Kung Fu Tea's Green Wow Milk,3
-O Jazz,"Jasmine green tea, orange syrup, honey",,,3
-Zen's Awakening,Coffee,"Chocolate, condensed milk",Really strong coffee and sweer,3
-Wintermelon Milk Tea,"Wintermelon syrup, green tea",Tapioca pearls,Wintermelon is a squash,1
-Lemon QQ,"Lemon syrup, green tea",Jelly,Sour,2
-Chrysanthemum Pu-Erh Tea,"Black tea, chrysanthemum tea",Tapioca pearls,"Chrysanthemum tea is made using flower petals, very light",2
-Honey Pomelo Juice,"Pomelo juice, honey",Tapioca pearls,Pomelo is like a giant grapefruit,2
-Yogurt Grapefruit Juice,"Yakult, grapefruit juice",Tapioca pearls,Yakult is a tart yogurt drink,1
-Yogurt Green Tea,"Yakult, green tea",Tapioca pearls,Yakult is a tart yogurt drink,1
-Herbal Jelly Wow Milk,Milk,"Tapioca pearls, herbal jelly",Herbal jelly is jelly made of herbs,1
-Longan Red Date Tea,"Jujube tea, red date syrup",Tapioca pearls,"Longan is jujube, great for sore throats",1
-Red Guava,"Red guava syrup, green tea",Jelly or aloe,Sweet and a little tart,3
-The Hulk,"Kiwi syrup, green apple syrup, lychee syrup",Aloe,"Green like Hulk, but sweeter",3
-Thai Milk Tea,"Thai tea, milk",Tapioca pearls,Orange in color,3
-Kumquat Juice,Kumquat juice,Any,Kumquats are like tiny oranges,2
+name,ingredients,toppings,notes,store_id,user_id
+Jasmine Green Milk Tea,"Jasmine green tea, milk",Tapioca pearls,Jasmine tea is flowery,1,1
+Genmaicha Milk Tea,"Genmaicha, milk",Tapioca pearls,Genmaicha is roasted brown rice green tea,2,2
+Taro Milk Tea,"Taro powder, milk, green tea",Tapioca pearls,Taro is a root vegetable,1,1
+Red Wow Milk,Milk,"Tapioca pearls, azuki beans",Azuki beans are red beans,1,1
+Green Wow Milk,Milk,"Tapioca pearls, mung beans",Mung beans are also called green beans in Chinese,1,1
+Hokkaido Milk Tea,"Black tea, milk",Tapioca pearls,"Milk tea from Hokkaido, Japan.  Tastes like french vanilla.",3,3
+Passionfruit Green Tea,"Black tea, passionfruit syrup",Tapioca pearls,Also tastes good with aloe or jelly as toppings,3,3
+Matcha Tea Latte,"Matcha powder, milk",Tapioca pearls,Matcha is fancy Japanese green tea,2,2
+Fire Dragon,Milk,"Azuki beans, grass jelly, tapioca pearls",Similar to Kung Fu Tea's Red Wow Milk,3,3
+Green Wizard,Milk,"Mung beans, grass jelly, tapioca",Similar to Kung Fu Tea's Green Wow Milk,3,3
+O Jazz,"Jasmine green tea, orange syrup, honey",,,3,3
+Zen's Awakening,Coffee,"Chocolate, condensed milk",Really strong coffee and sweer,3,3
+Wintermelon Milk Tea,"Wintermelon syrup, green tea",Tapioca pearls,Wintermelon is a squash,1,1
+Lemon QQ,"Lemon syrup, green tea",Jelly,Sour,2,2
+Chrysanthemum Pu-Erh Tea,"Black tea, chrysanthemum tea",Tapioca pearls,"Chrysanthemum tea is made using flower petals, very light",2,2
+Honey Pomelo Juice,"Pomelo juice, honey",Tapioca pearls,Pomelo is like a giant grapefruit,2,2
+Yogurt Grapefruit Juice,"Yakult, grapefruit juice",Tapioca pearls,Yakult is a tart yogurt drink,1,1
+Yogurt Green Tea,"Yakult, green tea",Tapioca pearls,Yakult is a tart yogurt drink,1,1
+Herbal Jelly Wow Milk,Milk,"Tapioca pearls, herbal jelly",Herbal jelly is jelly made of herbs,1,1
+Longan Red Date Tea,"Jujube tea, red date syrup",Tapioca pearls,"Longan is jujube, great for sore throats",1,1
+Red Guava,"Red guava syrup, green tea",Jelly or aloe,Sweet and a little tart,3,3
+The Hulk,"Kiwi syrup, green apple syrup, lychee syrup",Aloe,"Green like Hulk, but sweeter",3,3
+Thai Milk Tea,"Thai tea, milk",Tapioca pearls,Orange in color,3,3
+Kumquat Juice,Kumquat juice,Any,Kumquats are like tiny oranges,2,2
+Bambu,"Kiwi syrup, green tea",Yogurt pop,Yogurt pop are tapioca pearls that pop and ooze yogurt drink,3,3
+Teemo,"Orange syrup, green tea",Aloe,Teemo is a super adorable LoL champ,3,3
+Yasuo,"Grapefruit syrup, green tea",Yogurt pop,Yasuo is a pretty cool LoL champ but idk why they decided on grapefruit,3,3
+Pikachu,"Lemon syrup, green tea",Aloe,Lemon gives a nice shock,3,3
+Oriental Beauty,Oolong tea,Yogurt pop,Oriental Beauty is a type of oolong tea,2,2
+Matcha Red Bean Smoothie,Matcha green tea,Azuki beans,Blended together in a smoothie,2,2
+Taro Pudding Milk Tea,"Taro powder, milk, black tea",Pudding,Pudding is more like flan consistency,2,2
+Chatime Milk Tea,"Black tea, milk",Tapioca pearls,Special Chatime black milk tea,2,2
