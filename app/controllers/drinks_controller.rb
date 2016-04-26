@@ -1,5 +1,5 @@
 class DrinksController < OpenReadController
-  before_action :set_drink, only: [:show, :update, :destroy]
+  before_action :set_drink, only: [:update, :destroy] # it matters who created the drink
 
   # GET /drinks
   # GET /drinks.json
@@ -12,6 +12,7 @@ class DrinksController < OpenReadController
   # GET /drinks/1
   # GET /drinks/1.json
   def show
+    @drink = Drink.find(params[:id]);
     render json: @drink
   end
 
@@ -22,20 +23,23 @@ class DrinksController < OpenReadController
     if current_user.admin?
       @drink = current_user.stores.find(params[:store_id]).drinks.build(drink_params)
       @drink.user_id = current_user.id
-      @drink.save
-        render json: @drink, status: :created, location: @drink
-    else
-      render json: @drink.errors, status: :unprocessable_entity
-    end
 
+      if @drink.save
+        render json: @drink, status: :created, location: @drink
+      else
+        render json: @drink.errors, status: :unprocessable_entity
+      end
+
+    else
+      head :bad_request
+    end
   end
 
   # PATCH/PUT /drinks/1
   # PATCH/PUT /drinks/1.json
   def update
-    if current_user.admin?
-      @drink = current_user.drinks.find(params[:id])
-      @drink.update(drink_params)
+    @drink.update(drink_params)
+    if @drink.valid?
       head :no_content
     else
       render json: @drink.errors, status: :unprocessable_entity
@@ -45,8 +49,8 @@ class DrinksController < OpenReadController
   # DELETE /drinks/1
   # DELETE /drinks/1.json
   def destroy
-    if current_user.admin? && current_user.id == @drink.user_id
-      @drink.destroy
+    @drink.destroy
+    if @drink.destroyed?
       head :no_content
     else
       render json: @drink.errors, status: :unprocessable_entity
@@ -56,10 +60,10 @@ class DrinksController < OpenReadController
   private
 
     def set_drink
-      @drink = Drink.find(params[:id])
+      @drink = current_user.drinks.find(params[:id])
     end
 
     def drink_params
-      params.require(:drinks).permit(:name, :ingredients, :toppings, :notes, :store_id, :user_id)
+      params.require(:drinks).permit(:name, :ingredients, :toppings, :notes, :store_id)
     end
 end
