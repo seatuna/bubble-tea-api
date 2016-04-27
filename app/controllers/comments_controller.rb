@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController
+class CommentsController < OpenReadController
   before_action :set_comment, only: [:update, :destroy]
 
   def index
@@ -15,18 +15,13 @@ class CommentsController < ApplicationController
   # POST /comments
   def create
 
-    if current_user.admin?
-      @comment = current_user.drinks.find(params[:store_id]).comments.build(comment_params)
-      @comment.user_id = current_user.id
+    @comment = Drink.find(params[:drink_id]).comments.build(comment_params)
+    @comment.user_id = current_user.id
 
-      if @comment.save
-        render json: @comment, status: :created, location: @comment
-      else
-        render json: @comment.errors, status: :unprocessable_entity
-      end
-
+    if @comment.save
+      render json: @comment, status: :created, location: @comment
     else
-      head :bad_request
+      render json: @comment.errors, status: :unprocessable_entity
     end
   end
 
@@ -57,6 +52,6 @@ class CommentsController < ApplicationController
     end
 
     def comment_params
-      params.require(:comments).permit(:text)
+      params.require(:comments).permit(:comment)
     end
 end
