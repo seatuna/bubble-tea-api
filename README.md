@@ -1,5 +1,7 @@
 # Bubble Tea Time:  Back-End API
 
+Note: The API and database for this project were originally hosted on Heroku's free tier which is sadly no longer available. Unfortunately, that means the Bubble Tea Time app is no longer fully functional.
+
 [Bubble Tea Time](http://seatuna.github.io/bubble-tea-time/index.html)
 
 [Bubble Tea Front-End](https://github.com/seatuna/bubble-tea-time) is the front-end for this web app.
